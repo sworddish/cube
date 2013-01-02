@@ -7,7 +7,7 @@
 
 </style>
 <select id="step">
-  <option value="1e4">10 seconds</option>
+  <option value="1e3">1 seconds</option>
   <option value="6e4">1 minute</option>
   <option value="3e5">5 minutes</option>
 </select>
@@ -16,11 +16,11 @@
 <script>
 
 //
-var step = +cubism.option("step", 1e4);
+var step = +cubism.option("step", 1e3);
 
 //
 var context = cubism.context()
-    .serverDelay(1e4)
+    .serverDelay(1e3)
     .step(step)
     .size(1440);
 
